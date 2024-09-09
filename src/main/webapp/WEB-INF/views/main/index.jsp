@@ -34,9 +34,9 @@
         <h2>사료</h2>
         <div class="products">
          <c:forEach var="product" items="${goodsList}" varStatus="status">
-    		<c:if test="${status.index < 4}">
+    		<c:if test="${status.index < 3}">
             <div class="product">
-                <img src="${pageContext.request.contextPath}/assets/images/adult-food/1$royalcanin.jpg" alt="사료">
+                <img src="${product.filePath}/${product.saveName}" alt="${product.name}">
                <p>${product.name}</p><br><p>${product.regDate}</p><p>${product.price}원</p>
             </div>
             </c:if>
